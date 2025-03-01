@@ -17,6 +17,14 @@ class CreateUserServices {
     if (!name || !email || !password) {
       throw new Error("Preencha todos os campos!");
     }
+    const ifExistUser = await prismaClient.user.findFirst({
+      where: {
+        email: email,
+      },
+    });
+    if (ifExistUser) {
+      throw new Error("Email ja cadastrado!");
+    }
 
     const passwordHash = await hash(password, 8);
     try {
