@@ -6,3 +6,6 @@ Content-Type: application/json
     "email": "rodrigo@teste.com",
     "password": "123123"
 }
+
+###
+GET http://localhost:3333/profile/2cc89bec-13f8-4d32-b5e9-6058edc3046a
