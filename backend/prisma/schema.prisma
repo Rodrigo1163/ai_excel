@@ -1,0 +1,32 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id         String   @id
+  name       String
+  email      String
+  password   String
+  created_at DateTime @default(now())
+  updated_at DateTime
+  excel      Excel?
+
+  @@map("users")
+}
+
+model Excel {
+  id         String   @id
+  name       String
+  path       String
+  created_at DateTime @default(now())
+  updated_at DateTime
+  userId     String   @unique()
+  user       User     @relation(fields: [userId], references: [id])
+
+  @@map("excel")
+}
