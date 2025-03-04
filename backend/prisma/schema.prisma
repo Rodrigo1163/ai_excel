@@ -20,11 +20,11 @@ model User {
 }
 
 model Excel {
-  id         String   @id
+  id         String   @id @default(uuid())
   name       String
   path       String
   created_at DateTime @default(now())
-  updated_at DateTime
+  updated_at DateTime @updatedAt
   userId     String   @unique()
   user       User     @relation(fields: [userId], references: [id])
 
