@@ -8,6 +8,7 @@ import { StringOutputParser } from "@langchain/core/output_parsers";
 import { createStuffDocumentsChain } from "langchain/chains/combine_documents";
 
 import { CSVLoader } from "@langchain/community/document_loaders/fs/csv";
+
 import prismaClient from "../../prisma";
 
 interface SendMessageIaExcelServicesProps {
@@ -43,6 +44,7 @@ class SendMessageIaExcelServices {
       "excel",
       file.path
     );
+
     const loader = new CSVLoader(filePath);
     const docs = await loader.load();
 

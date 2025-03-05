@@ -17,14 +17,19 @@
     "@prisma/client": "^6.4.1",
     "bcrypt": "^5.1.1",
     "cheerio": "^1.0.0",
+    "csv-parse": "^5.6.0",
     "d3-dsv": "^2.0.0",
     "exceljs": "^4.4.0",
     "express": "^4.21.2",
     "express-async-errors": "^3.1.1",
+    "iconv-lite": "^0.6.3",
     "jsonwebtoken": "^9.0.2",
     "langchain": "^0.3.19",
     "multer": "^1.4.5-lts.1",
-    "uuid": "^11.1.0"
+    "node-xlsx-parser": "^0.3.3",
+    "uuid": "^11.1.0",
+    "xlsx": "^0.18.5",
+    "xlsx-to-csv": "^2.0.0"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",

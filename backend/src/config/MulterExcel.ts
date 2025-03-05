@@ -24,8 +24,6 @@ export default {
           const filename = `${fileHash}-${file.originalname}`;
           const typesFormat = [
             "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-            "application/vnd.ms-excel",
-            "application/xls",
             "text/csv",
           ];
 
