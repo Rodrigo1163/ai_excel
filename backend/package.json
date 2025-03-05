@@ -12,6 +12,7 @@
   "dependencies": {
     "@langchain/community": "^0.3.34",
     "@langchain/core": "^0.3.42",
+    "@langchain/langgraph": "^0.2.53",
     "@langchain/openai": "^0.4.4",
     "@prisma/client": "^6.4.1",
     "bcrypt": "^5.1.1",
@@ -22,7 +23,8 @@
     "express-async-errors": "^3.1.1",
     "jsonwebtoken": "^9.0.2",
     "langchain": "^0.3.19",
-    "multer": "^1.4.5-lts.1"
+    "multer": "^1.4.5-lts.1",
+    "uuid": "^11.1.0"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
