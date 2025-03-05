@@ -61,7 +61,10 @@ class SendMessageIaExcelServices {
     const llm = new ChatOpenAI({ model: "gpt-3.5-turbo", temperature: 0 });
 
     const template = `
-      Response to the question based on the context below.
+      Responda a pergunta com base nos contextos abaixo.
+      Se caso texto estiver muito inconsistente, diga que o modelo não está correto e que a estrutura do excel tem a seguinte estrutura:
+        A primeira coluna e linha deve conter o titulo pergunta e a segunda coluna deve conter o titulo resposta
+        Invente um exemplo de pergunta e resposta
       
       {context}
 
