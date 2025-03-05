@@ -19,14 +19,16 @@ export default {
       storage: multer.diskStorage({
         destination: resolve(__dirname, "..", "..", folder),
         filename: async (request, file, callback) => {
-          const { userId } = request.body;
+          const userId = request.user_id;
           const fileHash = crypto.randomBytes(16).toString("hex");
           const filename = `${fileHash}-${file.originalname}`;
           const typesFormat = [
             "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
             "application/vnd.ms-excel",
             "application/xls",
+            "text/csv",
           ];
+
           const fileTypeValid = typesFormat.includes(file.mimetype);
 
           if (!userId) return callback(new Error("Faça seu login"), "");

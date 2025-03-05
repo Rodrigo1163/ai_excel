@@ -1,19 +1,18 @@
-POST http://localhost:3333/users
-Content-Type: application/json
 
-{
-    "name": "Rodrigo Sena",
-    "email": "rodrigo@teste.com",
-    "password": "123123"
-}
-
-###
 GET http://localhost:3333/profile/2cc89bec-13f8-4d32-b5e9-6058edc3046a
 ###
 POST http://localhost:3333/session
 Content-Type: application/json
 
 {
-    "email": "rodrigo@teste.com",
+    "email": "fernanda@teste.com",
+    "password": "123123"
+}
+###
+POST http://localhost:3333/useruses
+Content-Type: application/json
+{
+    "name": "Fernanda Santos",
+    "email": "fernanda@teste.com",
     "password": "123123"
 }

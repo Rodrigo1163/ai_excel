@@ -3,7 +3,7 @@ import { UploadExcelServices } from "../../services/excel/UploadExcelServices";
 
 class UploadExcelController {
   async handle(req: Request, res: Response) {
-    const { userId } = req.body;
+    const userId = req.user_id;
     const { originalname, filename: path } = req.file;
 
     const uploadExcelServices = new UploadExcelServices();

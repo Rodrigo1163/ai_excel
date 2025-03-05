@@ -10,11 +10,18 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@langchain/community": "^0.3.34",
+    "@langchain/core": "^0.3.42",
+    "@langchain/openai": "^0.4.4",
     "@prisma/client": "^6.4.1",
     "bcrypt": "^5.1.1",
+    "cheerio": "^1.0.0",
+    "d3-dsv": "^2.0.0",
+    "exceljs": "^4.4.0",
     "express": "^4.21.2",
     "express-async-errors": "^3.1.1",
     "jsonwebtoken": "^9.0.2",
+    "langchain": "^0.3.19",
     "multer": "^1.4.5-lts.1"
   },
   "devDependencies": {
