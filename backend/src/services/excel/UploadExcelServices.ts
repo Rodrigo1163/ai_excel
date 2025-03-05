@@ -7,10 +7,16 @@ interface UploadExcelServicesProps {
 
 class UploadExcelServices {
   async execute({ name, path, userId }: UploadExcelServicesProps) {
-    const excel = await prismaClient.excel.create({
-      data: {
+    const excel = await prismaClient.excel.upsert({
+      create: {
         name,
         path,
+        userId,
+      },
+      update: {
+        path,
+      },
+      where: {
         userId,
       },
     });

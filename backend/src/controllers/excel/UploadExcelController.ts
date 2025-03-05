@@ -6,10 +6,6 @@ class UploadExcelController {
     const { userId } = req.body;
     const { originalname, filename: path } = req.file;
 
-    if (!originalname || !path) {
-      throw new Error("Falha ao fazer upload");
-    }
-
     const uploadExcelServices = new UploadExcelServices();
     const excel = await uploadExcelServices.execute({
       name: originalname,
